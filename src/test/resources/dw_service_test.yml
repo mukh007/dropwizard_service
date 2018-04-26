@@ -1,0 +1,28 @@
+appName: NSFWService
+cachePrefix: "cp"
+cacheRetentionHours: 0.1
+nsfwThreshold: 0.7
+nsfwModelPath: ".tmp/nsfw_model/nsfw_model.pb"
+
+urlContentDownloaderConfig:
+  requestTimeoutSeconds: 5
+  connectionRequestTimeout: 5000
+  connectTimeout: 10000
+  acceptedTypes: [image/jpeg, image/gif, image/png]
+  proxyScheme: "http"
+  proxyHost: "ucf-b2b-proxy.us.oracle.com"
+  proxyPort: "80"
+
+metrics:
+    frequency: 5 minutes
+    reporters:
+      - type: log
+
+logging:
+    level: INFO
+    loggers:
+        "com.oracle.ci": DEBUG
+    appenders:
+      - type: console
+        target: stdout
+        logFormat: "[%d{DATE}] %-6level [%t] %logger{5}: %m%n%rEx"
