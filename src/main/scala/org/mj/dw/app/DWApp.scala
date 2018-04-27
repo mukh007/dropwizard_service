@@ -5,7 +5,7 @@ import com.typesafe.scalalogging.LazyLogging
 import io.dropwizard.setup.{Bootstrap, Environment}
 import org.joda.time.DateTime
 import org.mj.dw.healthcheck.DWServiceHealthCheck
-import org.mj.dw.resource.DWResource
+import org.mj.dw.app.resource.DWResource
 
 object DWApp extends ScalaApplication[DWAppConfiguration] with LazyLogging {
   override def init(bootstrap: Bootstrap[DWAppConfiguration]): Unit = {

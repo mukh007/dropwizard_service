@@ -1,1 +1,3 @@
 appName: DWService
+metrics:
+  frequency: 1 minute
